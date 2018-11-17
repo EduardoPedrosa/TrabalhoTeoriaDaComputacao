@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Principal{
     public static void main(String args[]){
         Scanner entrada = new Scanner(System.in);
-        String lixo = entrada.nextLine();
-        String estados = entrada.nextLine();
-        String alfabetoEntrada = entrada.nextLine();
-        String alfabetoFita = entrada.nextLine();
-        lixo = entrada.nextLine();
+        String lixo = entrada.nextLine(); //gambiarra 
+        String estados = entrada.nextLine(); //pegando estados
+        String alfabetoEntrada = entrada.nextLine(); //pegando alfabeto de entrada
+        String alfabetoFita = entrada.nextLine(); //pegando alfabeto da fita
+        lixo = entrada.nextLine(); //gambiarra
         Maquina m = new Maquina();
         ManipulaString.insereEstados(estados,m);
         ManipulaString.insereAlfabetoEntrada(alfabetoEntrada, m);
@@ -23,6 +23,7 @@ public class Principal{
         String fita = entrada.nextLine();
         m.setFita(fita);
         m.escreverMaquina();
+        m.executar();
     }
 
 }
