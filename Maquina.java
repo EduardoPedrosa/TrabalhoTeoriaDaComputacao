@@ -47,10 +47,15 @@ public class Maquina{
         imprimeConfiguracao(estadoInicial);//configuracao inicial
         while(procurarTransicao(estado, simbolo) != null){
             String proxEstado = encontrarProxEstado(estado, simbolo); //execucao de transicao e busca de proximo estado
+            if((posCabecaLeitura == fita.length()) || (fita.charAt(fita.length()-1) != 'B')){  //adicionando um B no final caso a cabeça de leitura 
+                                                                                               //va alem da fita ou caso o ultimo elemento seja trocado por 1
+                fita += "B";
+            }
             imprimeConfiguracao(proxEstado);//imprimindo configuração
             
             //atualizando valores de estado e simbolo atuais
             estado = proxEstado; //novo estado
+            
             simbolo = Character.toString(fita.charAt(posCabecaLeitura)); //simbolo agora eh o que a cabeca de leitura esta lendo
         }
     }
