@@ -1,8 +1,8 @@
-public class ManipulaString{
-    public static void insereEstados(String e, Maquina m){
-        e = e.replace("{", "");
-        e = e.replace("},", "");
-        String estados[] = e.split(",");
+public class ManipulaString{  //tira simbolos de { } e possiveis espacos desnecessarios e chama as funcoes da maquina recebida por parametro
+    public static void insereEstados(String e, Maquina m){ 
+        e = e.replace("{", "");  
+        e = e.replace("},", "");  
+        String estados[] = e.split(",");  
         for(String s : estados){
             m.adicionarEstado(s.trim());
         }

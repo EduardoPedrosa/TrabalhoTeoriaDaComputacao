@@ -66,7 +66,7 @@ public class Maquina{
         System.out.println(ladoEsquerdo + "{" + estado + "}" + ladoDireito);
     }
 
-    public Transicao procurarTransicao(String estado, String simbolo){
+    public Transicao procurarTransicao(String estado, String simbolo){  //retorna uma transicao caso encontre uma que corresponda ao estado atual e simbolo lido na fita
         for(Transicao t : transicoes){
             if((estado.equals(t.getEstado()) && (simbolo.equals(t.getSimbolo())))){
                 return t;
