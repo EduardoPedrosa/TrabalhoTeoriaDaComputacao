@@ -16,6 +16,7 @@ public class Principal{
         while(!transicao.equals("}")){
             ManipulaString.insereTransicao(transicao,m);
             transicao = entrada.nextLine();
+            transicao = transicao.trim();
         }
         String estadoInicial = entrada.nextLine();
         ManipulaString.insereEstadoInicial(estadoInicial,m);
